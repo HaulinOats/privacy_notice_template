@@ -1,0 +1,98 @@
+<xml>
+	<intro-title>Digital Privacy Notice</intro-title>
+	<intro-info>A Mark Lin Project</intro-info>
+	<main-category>
+		<main-title>Your Rights</main-title>
+		<main-info>When it comes to your health information, you have certain rights. This section explains your rights and some of our responsibilities to help you.</main-info>
+		<main-image>kitty.jpg</main-image>
+		<sub-category>
+			<sub-title>Get an electronic or paper copy of your medical record</sub-title>
+			<sub-description>You can ask to see or get an electronic or paper copy of your medical record and other health information we have about you. Ask us how to do this.</sub-description>
+			<sub-description>We will provide a copy or a summary of your health information, usually within 30 
+			days of your request. We may charge a reasonable, cost-based fee.</sub-description>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+		<sub-category>
+			<sub-title>Ask us to correct your medical record</sub-title>
+			<sub-description> You can ask us to correct health information about you that you think is incorrect 
+			or incomplete. Ask us how to do this.</sub-description>
+			<sub-description>We may say “no” to your request, but we’ll tell you why in writing within 60 days.</sub-description>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+	</main-category>
+	<main-category>
+		<main-title>Your Choices</main-title>
+		<main-info>For certain health information, you can tell us your choices about what we share. If you have a clear preference for how we share your information in the situations described below, talk to us. Tell us what you want us to do, and we will follow 
+		your instructions.</main-info>
+		<main-image>kitty.jpg</main-image>
+		<sub-category>
+			<sub-title>In these cases, you have both the right and choice to tell us to</sub-title>
+			<sub-description>Share information with your family, close friends, or others involved in your care</sub-description>
+			<sub-description>Share information in a disaster relief situation</sub-description>
+			<sub-description>Include your information in a hospital directory</sub-description>
+			<additional-info>If you are not able to tell us your preference, for example if you are unconscious, 
+			we may go ahead and share your information if we believe it is in your best interest. 
+			We may also share your information when needed to lessen a serious and imminent 
+			threat to health or safety</additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+		<sub-category>
+			<sub-title>In these cases we never share your information unless you give us written permission</sub-title>
+			<sub-description>Marketing purposes</sub-description>
+			<sub-description>Sale of your information</sub-description>
+			<sub-description>Most sharing of psychotherapy notes</sub-description>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+		<sub-category>
+			<sub-title>In the case of fundraising</sub-title>
+			<sub-description>We may contact you for fundraising efforts, but you can tell us not to 
+			contact you again.</sub-description>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+	</main-category>
+	<main-category>
+		<main-title>Our Uses and Disclosures</main-title>
+		<main-info>How do we typically use or share your health information?</main-info>
+		<main-image>kitty.jpg</main-image>
+		<sub-category>
+			<sub-title>Treat you</sub-title>
+			<sub-description>We can use your health information and share it with other professionals who are treating you.</sub-description>
+			<sub-example>A doctor treating you for an injury asks another doctor about your overall health condition.</sub-example>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+		<sub-category>
+			<sub-title>Run our Organization</sub-title>
+			<sub-description>We can use and share your health information to run our practice, improve your care, and contact you when necessary</sub-description>
+			<sub-example>We use health information about you to manage your treatment and services.</sub-example>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+		<sub-category>
+			<sub-title>Bill for your services</sub-title>
+			<sub-description>We can use and share your health information to bill and get payment from health plans or other entities.</sub-description>
+			<sub-example>We give information about you to your health insurance plan so it will pay for your services.</sub-example>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+		<sub-category>
+			<sub-title>Help with public health and safety issues</sub-title>
+			<sub-description> We can share health information about you for certain situations such as:</sub-description>
+			<sub-list>
+				<list-item>Preventing disease</list-item>
+				<list-item>Helping with product recalls</list-item>
+				<list-item>Reporting adverse reactions to medications</list-item>
+				<list-item>Reporting suspected abuse, neglect, or domestic violence</list-item>
+				<list-item>Preventing or reducing a serious threat to anyone’s health or safety</list-item>
+			</sub-list>
+			<additional-info></additional-info>
+			<sub-image>kitty.jpg</sub-image>
+		</sub-category>
+	</main-category>
+	<outro-title>Digital Privacy Notice</outro-title>
+	<outro-info>A Mark Lin Project</outro-info>
+</xml>

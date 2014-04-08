@@ -6,9 +6,6 @@ jQuery(document).ready(function( $ ) {
 	//apply Fit Text scaling to text
 	applyFitText();
 
-	//vertically center elements
-	// verticallyCenter($('.opener_button h2'));
-
 	//set opening buttons height to half of viewport
 	var window_height = $(window).height();
 	$('.opener_button').height(window_height/2);
@@ -62,7 +59,7 @@ jQuery(document).ready(function( $ ) {
 			notice_date = $('#prov_date').val();
 			formSubmit(name, type, notes, notice_date);
 
-			loadXML('http://www.brettdavidconnolly.com/DPNC/data/healthcare_provider.xml', 'hc_provider');
+			loadXML('http://www.brettdavidconnolly.com/dpnc/data/healthcare_provider.xml', 'hc_provider');
 		} else if(element_id == 'plan_cancel'){
 			$('#plan_form_cont').hide();
 			$('#opener_top').animate({height:window_height/2}, 1000, function(){
@@ -74,7 +71,7 @@ jQuery(document).ready(function( $ ) {
 			notes = $('#plan_notes').val();
 			notice_date = $('#plan_date').val();
 			formSubmit(name, type, notes, notice_date);
-			loadXML('http://www.brettdavidconnolly.com/DPNC/data/health_plan.xml', 'health_plan');
+			loadXML('http://www.brettdavidconnolly.com/dpnc/data/health_plan.xml', 'health_plan');
 		}
 	})
 
@@ -107,7 +104,6 @@ jQuery(document).ready(function( $ ) {
 		  	$(xml).find('outro-info').each(function(){
 		  		outro_info.push($(this).text());
 		  	})
-		  	console.log(outro_info);
 		  	// outro_info  = $(xml).find('outro-info').text();
 		  	intro_title_array = intro_title.split('.');
 
@@ -118,11 +114,11 @@ jQuery(document).ready(function( $ ) {
 		  		$(intro_content).append('<h1>' + intro_title_array[i] + '</h1>');
 		  	}
 		  	$('#dpn_content').append(intro_content);
-		  	$('#dpn_content').addClass(privacyType);
+		  	$('#dpn_content').addClass('hc_provider');
 
 		  	//loop through each main category tag in the xml
 		  	$(xml).find('main-category').each(function(index,value){
-		  		console.log(index);
+		  		
 		  		//get category title and information, create main_category_selector
 		  		main_title = $(this).find('main-title').text();
 		  		main_info  = $(this).find('main-info').text();
@@ -136,7 +132,7 @@ jQuery(document).ready(function( $ ) {
 			  		$(footer_content).append('<hr id="hr_bar_'+index+'"data-title="'+ main_title +'"><div class="main_cat_circle" id="cat_circle_'+index+'"></div>');
 			  	}
 
-		  		var main_category_content = $('<div data-category="' + category_number + '" data-title="'+ main_title +'" data-info="'+ main_info +'" class="main_category_'+ category_number +' slide main_info '+privacyType+'_slide" id="'+privacyType+'_main_' + index + '"></div>');
+		  		var main_category_content = $('<div data-category="' + category_number + '" data-title="'+ main_title +'" data-info="'+ main_info +'" data-image-url="img/'+ main_image +'" class="main_category_'+ category_number +' slide main_info '+privacyType+'_slide" id="'+privacyType+'_main_' + index + '"></div>');
 		  		var slide_top_area = $('<div class="top_area '+privacyType+'_top_area top_area_'+ category_number +'"></div>');
 		  		var slide_bottom_area = $('<div class="bottom_area '+privacyType+'_bottom_area"></div>')
 		  		$(slide_top_area).append('<h2>'+ main_title +'</h2>');
@@ -198,13 +194,15 @@ jQuery(document).ready(function( $ ) {
 		  	});
 			main_2_title = $('.main_category_2').first().attr('data-title');
 			main_2_info = $('.main_category_2').first().attr('data-info');
+			main_2_image = $('.main_category_2').first().attr('data-image-url');
 			main_3_title = $('.main_category_3').first().attr('data-title');
 			main_3_info = $('.main_category_3').first().attr('data-info');
-			$('.main_category_2').first().before('<div class="title-slide slide" id="title-slide-2" data-category="2"><h2>'+ main_2_title +'</h2><p>'+ main_2_info +'</p></div>');
-			$('.main_category_3').first().before('<div class="title-slide slide" id="title-slide-3" data-category="3"><h2>'+ main_3_title +'</h2><p>'+ main_3_info +'</p></div>');
+			main_3_image = $('.main_category_3').first().attr('data-image-url');
+			$('.main_category_2').first().before('<div class="title-slide slide" id="title-slide-2" data-category="2"><div><img src="'+ main_2_image +'" alt="image" /><h2>'+ main_2_title +'</h2></div><p>'+ main_2_info +'</p></div>');
+			$('.main_category_3').first().before('<div class="title-slide slide" id="title-slide-3" data-category="3"><div><img src="'+ main_3_image +'" alt="image" /><h2>'+ main_3_title +'</h2></div><p>'+ main_3_info +'</p></div>');
 			$('#hc_provider_main_0').addClass('outViewPort');
 			$(".dpn_footer_category").last().append('<img src="img/heart_crumb.png" id="heart_crumb_icon" alt="heart_crumb" />')
-		  	var outro_slide = $('<div id="dpn_outro_slide" class="slide"><h1>' + outro_title + '</h1></div>');
+		  	var outro_slide = $('<div id="dpn_outro_slide" class="slide" data-category="end"><h1>' + outro_title + '</h1></div>');
 		  	
 		  	for(i=0;i<outro_info.length;i++){
 		  		$(outro_slide).append('<p>&#8226; '+outro_info[i]+'</p>');
@@ -212,6 +210,7 @@ jQuery(document).ready(function( $ ) {
 
 		  	$('#dpn_content').append(outro_slide);
 
+		  	//Set all slide height and width to window size
 			var window_height = $(window).height();
 			var window_width = $(window).width();
 			$('.slide').height(window_height).width(window_width);
@@ -263,17 +262,19 @@ jQuery(document).ready(function( $ ) {
 			  	} else if(direction == 'right'){
 			  		previous_slide = $(this).prev();
 			  		category_id = $(previous_slide).attr('data-category');
-			  		$('html, body').animate({
-				        scrollLeft: $(previous_slide).offset().left
-				    }, 1000, function(){
-				    	category_id = $(next_slide).attr('data-category');
-				    	console.log(category_id);
-				    	$(previous_slide).find('.animation_stage :first-child').fadeIn();
-				    	$(previous_slide).find('.anim_image_1').addClass('animate');
-				    	$(previous_slide).find('.sub_category_cont').fadeIn();
-				    });
+			  		if(previous_slide.length > 0){
+				  		$('html, body').animate({
+					        scrollLeft: $(previous_slide).offset().left
+					    }, 1000, function(){
+					    	category_id = $(next_slide).attr('data-category');
+					    	$(previous_slide).find('.animation_stage :first-child').fadeIn();
+					    	$(previous_slide).find('.anim_image_1').addClass('animate');
+					    	$(previous_slide).find('.sub_category_cont').fadeIn();
+					    });
 
-				    footerSlideAnimate(category_id);
+					}
+
+					footerSlideAnimate(category_id);
 			  	}
 			  }
 			});
@@ -281,7 +282,6 @@ jQuery(document).ready(function( $ ) {
 			//scroll to page
 			$(".dpn_footer_category_link").on('click', function() {
 				var category_id = $(this).attr('href');
-				console.log(category_id);
 			    $('html, body').animate({
 			        scrollLeft: $(category_id).offset().left
 			    }, 2000);
@@ -296,10 +296,6 @@ jQuery(document).ready(function( $ ) {
 					$(this).next().addClass('active_bullet');
 				}
 			})
-
-			//create top and bottom border for bullets (sub categories)
-			$('.sub_cat_holder ul').prepend('<li class="list_border_top"></li>').append('<li class="list_border_bottom"></li>')
-
 		  }, 
 		  error: function(){
 		  	alert('problem with xml retrieval');
@@ -327,6 +323,10 @@ jQuery(document).ready(function( $ ) {
     		$('#category_highlight').animate({"left":"32.6%",},1000).css('background-color', 'rgb(66,143,177)');
     	} else if(category_id == 3){
     		$('#category_highlight').animate({"left":"65.9%",},1000).css('background-color', 'rgb(173,212,119)');
+    	} else if(category_id == 'end'){
+    		$('#category_highlight').animate({"left":"99%",},1000, function(){
+    			$('#category_highlight').css('background-color', 'rgba(240,85,86, 0)');
+    		});
     	}
 	}
 
@@ -368,9 +368,5 @@ jQuery(document).ready(function( $ ) {
 		}).done(function( data ) {
 			console.log(data)
 		});
-	}
-
-	function animateTextToCenter(element) {
-
 	}
 });

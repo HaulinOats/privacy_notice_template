@@ -24,7 +24,7 @@ body{
 }
 #ajaxLoader p{
 	text-align: center;
-	font-size:200%;
+	font-size:25px !important;
 	width:100% !important;
 }
 /* opener buttons */
@@ -374,7 +374,8 @@ top: 20px;
 	color:rgb(240,85,86);
 	top: -55px;
 	font-style: italic;
-	width: 20%;
+	width: 28%;
+
 	font-size:100% !important;
 }
 #category_highlight{
@@ -468,10 +469,32 @@ background: lightblue;
 	display: block;
 	margin-top:50px;
 }
+.title-slide img{
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+	width:100px;
+}
+.title-slide div{
+	width: 80%;
+	margin: 0 auto;
+}
 
 #title-slide-2 h2{
 	color:rgb(66,143,177);
 }
 #title-slide-3 h2{
 	color:rgb(173,212,119);
+}
+#right-slide{
+	right:0;
+}
+#left-slide{
+	left:0;
+}
+.main_title_div p{
+	font-size: 20px !important;
+	margin:0 !important;
+margin-bottom: -10px;
+letter-spacing: 2px;
 }

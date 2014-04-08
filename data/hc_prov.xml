@@ -138,17 +138,13 @@ and how you can get access to this information. Please review carefully.</intro-
 	<main-category>
 		<category-number>3</category-number>
 		<main-title>OUR USES AND DISCLOSURES</main-title>
-		<main-title-sub>How do we typically use or share your health information? </main-title-sub>
-        <main-image>ourDisclosures.png</main-image>
+		<main-title-sub>How do we typically use or share your health information?</main-title-sub>
 		<main-info>We typically use or share your health information in the following ways.</main-info>
 		<sub-category>
 			<sub-title>Treat you</sub-title>
 			<sub-description>We can use your health information and share it with other professionals who are treating you.</sub-description>
 			<sub-example>A doctor treating you for an injury asks another doctor about your overall health condition.</sub-example>
-            <additional-info></additional-info>
-			<animation-image>person1.png</animation-image>
-			<animation-image>ambulance.png</animation-image>
-			<animation-image>corporate.png</animation-image>
+			<additional-info></additional-info>
 		</sub-category>
 		<sub-category>
 			<sub-title>Run our Organization</sub-title>

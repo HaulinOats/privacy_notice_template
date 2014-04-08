@@ -8,5 +8,5 @@ privacy_notice_template
 <h2>Important Notes:</h2>
 <ul>
   <li>users must explicitly keep the same names for the XML files or must change the file names within the custom javascript file at the "loadXML" function</li>
-  <li>The user must set up their own database to capture user data.  Edit the 'dpnc_dp_connet.php' file inside 'inc' folder</li>
+  <li>The user must set up their own database to capture user data.  Edit the 'dpnc_dp_connect.php' file inside 'inc' folder</li>
 </ul>
